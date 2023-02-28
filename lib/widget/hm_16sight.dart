@@ -5,15 +5,20 @@ class Hm16Sight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 28),
-      child: Text(
-        "16 Sight",
-        style: TextStyle(
-          fontSize: 13.0,
-          fontWeight: FontWeight.bold,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: const [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 28),
+          child: Text(
+            "16 Sight",
+            style: TextStyle(
+              fontSize: 13.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-      ),
+      ],
     );
   }
 }

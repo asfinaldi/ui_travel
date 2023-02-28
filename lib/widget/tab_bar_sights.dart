@@ -4,41 +4,45 @@ import 'package:flutter/material.dart';
 import 'package:ui_travel_1/model/sights_model.dart';
 
 class TabBarSights extends StatelessWidget {
+  const TabBarSights({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Expanded(
-              child: Container(
-                height: 200,
-                child: ListView.builder(
-                    itemCount: 4,
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemBuilder: (Context, index) {
-                      return InkWell(
-                        onTap: () {},
-                        child: Container(
-                          width: 300,
-                          padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.only(left: 15),
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                              image: AssetImage("assets/images/img${index+1}.jpg"),
-                            ),
-                          ),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 300,
+            //+width: 200,
+            child: ListView.builder(
+                itemCount: allData.length,
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  final data = allData[index];
+                  return InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 100,
+                      // height: 100,
+                      padding: const EdgeInsets.all(20),
+                      margin: const EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        image: DecorationImage(
+                          image:
+                              AssetImage('assets/images/${data.imgUrl}'),
+                          fit: BoxFit.cover,
+                          opacity: 0.7,
                         ),
-                      );
-                    }),
-              ),
-            ),
-          ],
-        ),
+                      ),
+                    ),
+                  );
+                }),
+          ),
+        ],
       ),
     );
   }
