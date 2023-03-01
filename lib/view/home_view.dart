@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 import '../widget/hm_16sight.dart';
 import '../widget/tab_bar_adventures.dart';
+import '../widget/tab_bar_adventurous.dart';
 import '../widget/tab_bar_sights.dart';
 import '../widget/tab_bar_tours.dart';
 import 'package:ui_travel_1/view/tab_bar_view.dart';
@@ -86,6 +87,10 @@ class HomeView extends StatelessWidget {
                             height: 10.0,
                           ),
                           TabBarSights(),
+                          const SizedBox(
+                          height: 10.0,
+                          ),
+                          TabBarAdventurous(),
                         ],
                       ),
                     ),

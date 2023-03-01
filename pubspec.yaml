@@ -36,6 +36,7 @@ dependencies:
   flutter_snake_navigationbar: ^0.6.1
   flutter_svg: ^2.0.2
   google_fonts: ^4.0.3
+  material_design_icons_flutter: ^6.0.7096
   tab_indicator_styler: ^2.0.0
 
 dev_dependencies:

@@ -18,7 +18,7 @@ class Sight {
   });
 }
 
-List<Sight> allData = [
+final List<Sight> allData = [
   Sight(
     imgUrl: 'japan.jpg',
     name: 'Niagara Falls',
